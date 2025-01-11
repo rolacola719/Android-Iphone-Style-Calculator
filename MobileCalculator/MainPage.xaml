@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileCalculator.MainPage">
+
+    <ScrollView>
+        <Grid BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Frame x:Name="OutputFrame" Grid.Row="0" HeightRequest="250" BackgroundColor="Black" BorderColor="Black">
+                <Editor x:Name="OutputText" TextColor="White" FontSize="62" VerticalTextAlignment="End" HorizontalTextAlignment="End" PlaceholderColor="White" BackgroundColor="Black" Keyboard="Numeric"/>
+            </Frame>
+
+            <Grid x:Name="InputGrid" BackgroundColor="Black" Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+                <Button x:Name="ACButton" Text="AC" Grid.Column="0" Grid.Row="0" BackgroundColor="LightGray" TextColor="Black" Clicked="ACButton_Clicked"/>
+                <Button x:Name="PlusMinusButton" Text="+/-" Grid.Column="1" Grid.Row="0" BackgroundColor="LightGray" TextColor="Black" Clicked="PlusMinusButton_Clicked"/>
+                <Button x:Name="PercentButton" Text="%" Grid.Column="2" Grid.Row="0" BackgroundColor="LightGray" TextColor="Black" Clicked="PercentButton_Clicked"/>
+                <Button x:Name="DivideButton" Text="/" Grid.Column="3" Grid.Row="0" BackgroundColor="Orange" Clicked="DivideButton_Clicked"/>
+
+                <Button x:Name="SevenButton" Text="7" Grid.Column="0" Grid.Row="1" BackgroundColor="Gray" Clicked="SevenButton_Clicked"/>
+                <Button x:Name="EightButton" Text="8" Grid.Column="1" Grid.Row="1" BackgroundColor="Gray" Clicked="EightButton_Clicked"/>
+                <Button x:Name="NineButton" Text="9" Grid.Column="2" Grid.Row="1" BackgroundColor="Gray" Clicked="NineButton_Clicked"/>
+                <Button x:Name="TimesButton" Text="x" Grid.Column="3" Grid.Row="1" BackgroundColor="Orange" Clicked="TimesButton_Clicked"/>
+
+                <Button x:Name="FourButton" Text="4" Grid.Column="0" Grid.Row="2" BackgroundColor="Gray" Clicked="FourButton_Clicked"/>
+                <Button x:Name="FiveButton" Text="5" Grid.Column="1" Grid.Row="2" BackgroundColor="Gray" Clicked="FiveButton_Clicked"/>
+                <Button x:Name="SixButton" Text="6" Grid.Column="2" Grid.Row="2" BackgroundColor="Gray" Clicked="SixButton_Clicked"/>
+                <Button x:Name="MinusButton" Text="-" Grid.Column="3" Grid.Row="2" BackgroundColor="Orange" Clicked="MinusButton_Clicked"/>
+
+                <Button x:Name="OneButton" Text="1" Grid.Column="0" Grid.Row="3" BackgroundColor="Gray" Clicked="OneButton_Clicked"/>
+                <Button x:Name="TwoButton" Text="2" Grid.Column="1" Grid.Row="3" BackgroundColor="Gray" Clicked="TwoButton_Clicked"/>
+                <Button x:Name="ThreeButton" Text="3" Grid.Column="2" Grid.Row="3" BackgroundColor="Gray" Clicked="ThreeButton_Clicked"/>
+                <Button x:Name="PlusButton" Text="+" Grid.Column="3" Grid.Row="3" BackgroundColor="Orange" Clicked="PlusButton_Clicked"/>
+
+                <Button x:Name="ZeroButton" Text="0" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="Gray" Clicked="ZeroButton_Clicked"/>
+                <Button x:Name="DecimalButton" Text="." Grid.Column="2" Grid.Row="4" BackgroundColor="Gray" Clicked="DecimalButton_Clicked"/>
+                <Button x:Name="EqualButton" Text="=" Grid.Column="3" Grid.Row="4" BackgroundColor="Orange" Clicked="EqualButton_Clicked"/>
+
+
+            </Grid>
+
+            
+            
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
